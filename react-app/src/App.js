@@ -32,6 +32,9 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <div>
+        <label>Username: </label>
+      </div>
       <button onClick={(e) => {
         signInWithPopup(auth, provider)
           .then(async (result) => {
