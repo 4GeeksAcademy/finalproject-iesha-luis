@@ -1,4 +1,4 @@
- import { useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { GoogleAuthProvider, getAuth, signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
@@ -32,7 +32,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <button onClick={(e) => {
+      <button className='signin' onClick={(e) => {
         signInWithPopup(auth, provider)
           .then(async (result) => {
             // This gives you a Google Access Token. You can use it to access the Google API.
@@ -74,7 +74,7 @@ function App() {
       }}>Sign in</button>
 
       <button onClick={() => auth.signOut()}>Sign out</button>
-    </div>
+      </div>
   );
 }
 
